@@ -1,0 +1,69 @@
+{
+    "manifest_version": 3,
+    "name": "TXtension",
+    "version": "1.0.0",
+    "description": "Translate any tweet instantly with premium AI models like GPT-4.1, Claude, Gemini, DeepSeek, and more.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "contextMenus",
+        "alarms",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://twitter.com/*",
+        "https://x.com/*",
+        "https://pro.x.com/*",
+        "https://generativelanguage.googleapis.com/*",
+        "https://openrouter.ai/*",
+        "https://api.openai.com/*",
+        "https://api.deepseek.com/*",
+        "https://api.anthropic.com/*",
+        "https://discord.com/*"
+    ],
+    "background": {
+        "service_worker": "runtime/service.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/*",
+                "https://x.com/*",
+                "https://pro.x.com/*",
+                "https://discord.com/*"
+            ],
+            "js": ["pagehooks/injector.js"],
+            "css": ["pagehooks/injector.css"],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_title": "TXtension Control Panel",
+        "default_popup": "controlpanel/panel.html",
+        "default_icon": {
+            "16": "icons/images.png",
+            "48": "icons/images.png",
+            "128": "icons/images.png"
+        }
+    },
+    "icons": {
+        "16": "icons/images.png",
+        "48": "icons/images.png",
+        "128": "icons/images.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "pagehooks/injector.css",
+                "core/options.js"
+            ],
+            "matches": [
+                "https://twitter.com/*",
+                "https://x.com/*",
+                "https://pro.x.com/*",
+                "https://discord.com/*"
+            ]
+        }
+    ]
+}

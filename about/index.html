@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to TXtension</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: radial-gradient(circle at 20% 20%, rgba(29, 211, 248, 0.18), rgba(4, 6, 12, 0.92) 65%), #04060c;
+        color: #edf2ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 32px;
+      }
+      .card {
+        max-width: 720px;
+        width: 100%;
+        background: rgba(6, 10, 18, 0.87);
+        border: 1px solid rgba(29, 211, 248, 0.18);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 32px;
+        letter-spacing: 0.04em;
+      }
+      p {
+        margin: 0 0 18px;
+        line-height: 1.6;
+        color: #b8c7e3;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 24px;
+      }
+      a.card-link {
+        display: block;
+        padding: 14px 16px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #f5f7ff;
+        background: rgba(12, 18, 30, 0.88);
+        border: 1px solid rgba(90, 210, 255, 0.2);
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        transition: transform 0.18s ease, border 0.18s ease;
+      }
+      a.card-link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(29, 211, 248, 0.5);
+      }
+      .tagline {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: rgba(185, 243, 255, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <span class="tagline">Open community build</span>
+      <h1>TXtension</h1>
+      <p>
+        Thanks for installing TXtension. Connect your translation model, choose a tone, and convert any tweet without leaving the timeline.
+      </p>
+      <p>TXtension is an open project. Fork it, customise it, and share improvements with your teammates.</p>
+      <p>
+        Built by <strong><a href="https://github.com/cryptonparody-sys" style="color:#8fd3ff;text-decoration:none;">cryptonparody-sys</a></strong> · Telegram: <a href="https://t.me/itscryptools" style="color:#8fd3ff;text-decoration:none;">@itscryptools</a> · Email: <a href="mailto:cryptonparody@gmail.com" style="color:#8fd3ff;text-decoration:none;">cryptonparody@gmail.com</a>
+      </p>
+    </div>
+  </body>
+</html>
